@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>中央大學特約商店</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/NCULogo.svg" rel="icon">
+  <link href="assets/img/NCULogo.svg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="dash_style.css" rel="stylesheet">
+  
+  <!-- Google Map CSS -->
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+      margin: 0;
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: row;
+    }
+
+    #map {
+      height: 400px; /* 全屏高度 */
+      width: 50%;  /* 調整寬度 */
+      float: right;
+    }
+
+    #info-container {
+      padding: 20px;
+      width: 50%; /* 調整寬度 */
+    }
+
+    footer {
+      background: #f8f9fa;
+      text-align: center;
+      padding: 20px 0;
+      width: 100%;
+    }  
+  </style>
+</head>
+
+<body>
+<header id="header" class="header fixed-top d-flex align-items-center">
+  <div class="d-flex align-items-center justify-content-between">
+    <a href="MainPage.html" class="logo d-flex align-items-center">
+      <img src="assets/img/NCULogo.svg" alt="">
+      <span class="d-none d-lg-block">中央大學特約商店</span>
+    </a>
+    <i class="bi bi-list toggle-sidebar-btn" style="font-size: 24px; cursor: pointer;"></i>
+  </div>
+</header>
+<!-- End Header -->
+
+<!-- Sidebar -->
+<aside id="sidebar" class="sidebar">
+  <ul class="sidebar-nav" id="sidebar-nav">
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" href="MainPage.html">
+        <i class="bi bi-grid"></i><span>主頁</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#restaurant-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-egg-fried"></i><span>餐飲
+        </span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="restaurant-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a id="restaurant1" href="#">
+            <i class="bi bi-bookmark"></i><span>藝奇日本料理</span>
+          </a>
+        </li>
+        <li>
+          <a id="restaurant2" href="#">
+            <i class="bi bi-bookmark"></i><span>享鴨</span>
+          </a>
+        </li>
+        <li>
+          <a id="restaurant3" href="#">
+            <i class="bi bi-bookmark"></i><span>涮乃葉</span>
+          </a>
+        </li>
+        <li>
+          <a id="restaurant4" href="#">
+            <i class="bi bi-bookmark"></i><span>橫浜牛排</span>
+          </a>
+        </li>
+        <li>
+          <a id="restaurant5" href="#">
+            <i class="bi bi-bookmark"></i><span>原燒</span>
+          </a>
+        </li>
+        <li>
+            <a id="restaurant6" href="#">
+              <i class="bi bi-bookmark"></i><span>柚子花花青春客家菜</span>
+            </a>
+          </li>
+          <li>
+            <a id="restaurant7" href="#">
+              <i class="bi bi-bookmark"></i><span>陶板屋</span>
+            </a>
+          </li>
+          <li>
+            <a id="restaurant8" href="#">
+              <i class="bi bi-bookmark"></i><span>王品牛排</span>
+            </a>
+          </li>
+          <li>
+            <a id="restaurant9" href="#">
+              <i class="bi bi-bookmark"></i><span>尬鍋</span>
+            </a>
+          </li>
+          <li>
+            <a id="restaurant10" href="#">
+              <i class="bi bi-bookmark"></i><span>Tasty西堤牛排</span>
+            </a>
+          </li>
+          <li>
+            <a id="restaurant11" href="#">
+              <i class="bi bi-bookmark"></i><span>匡記涼麵</span>
+            </a>
+          </li>
+          <li>
+            <a id="restaurant12" href="#">
+              <i class="bi bi-bookmark"></i><span>友竹居</span>
+            </a>
+          </li>
+          <li>
+            <a id="restaurant13" href="#">
+              <i class="bi bi-bookmark"></i><span>天母盛鑫</span>
+            </a>
+          </li>
+          <li>
+            <a id="restaurant14" href="#">
+              <i class="bi bi-bookmark"></i><span>東東餐飲集團</span>
+            </a>
+          </li>
+          <li>
+            <a id="restaurant15" href="#">
+              <i class="bi bi-bookmark"></i><span>一番地</span>
+            </a>
+          </li>
+          <li>
+            <a id="restaurant16" href="#">
+              <i class="bi bi-bookmark"></i><span>海底撈</span>
+            </a>
+          </li>
+          <li>
+            <a id="restaurant17" href="#">
+              <i class="bi bi-bookmark"></i><span>七盞茶</span>
+            </a>
+          </li>
+          <li>
+            <a id="restaurant18" href="#">
+              <i class="bi bi-bookmark"></i><span>鶴茶樓</span>
+            </a>
+          </li>
+      </ul>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#traffic-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-bus-front"></i>
+        <span>交通</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="traffic-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a id="traffic1" href="#">
+              <i class="bi bi-bookmark"></i><span>中國東方航空</span>
+          </a>
+        </li>
+        <li>
+          <a id="traffic2" href="#">
+              <i class="bi bi-bookmark"></i><span>飛遊網 台灣航空</span>
+          </a>
+        </li>
+        <li>
+          <a id="traffic3" href="#">
+              <i class="bi bi-bookmark"></i><span>國泰航空</span>
+          </a>
+        </li>
+        <li>
+          <a id="traffic4" href="#">
+              <i class="bi bi-bookmark"></i><span>喜鴻(綜合)旅行社</span>
+          </a>
+        </li>
+        <li>
+          <a id="traffic5" href="#">
+              <i class="bi bi-bookmark"></i><span>愛之旅旅行社有限公司</span>
+          </a>
+        </li>
+      </ul>
+    </li>  
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#products-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-handbag"></i>
+        <span>用品</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="products-nav" class="nav-content collapse" data-bs-parent="#sidebar-nav">
+        <li>
+          <a id="products1" href="#">
+            <i class="bi bi-bookmark"></i><span>Homebox好博家</span>
+          </a>
+        </li>
+        <li>
+          <a id="products2" href="#">
+            <i class="bi bi-bookmark"></i><span>萬國通路股份有限公司</span>
+          </a>
+        </li>
+        <li>
+          <a id="products3" href="#">
+            <i class="bi bi-bookmark"></i><span>愛菲斯居家美學</span>
+          </a>
+        </li>
+        <li>
+          <a id="products4" href="#">
+            <i class="bi bi-bookmark"></i><span>朵法亞生活美學</span>
+          </a>
+        </li>
+        <li>
+            <a id="products5" href="#">
+              <i class="bi bi-bookmark"></i><span>台灣歐德家具股份有限公司</span>
+            </a>
+        </li>
+        <li>
+            <a id="products6" href="#">
+              <i class="bi bi-bookmark"></i><span>新視代影音科技</span>
+            </a>
+        </li>
+      </ul>
+    </li>
+
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#leisure-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-sunglasses"></i>
+        <span>休閒</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#dessert-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-cup-hot"></i>
+        <span>甜點</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+      <ul id="dessert-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+        <li>
+          <a href="#">
+            <i class="bi bi-bookmark"></i><span>肉桂捲製作所</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bi bi-bookmark"></i><span>萬益食品</span>
+          </a>
+        </li>
+        <li>
+          <a href="MainPage.html">
+            <i class="bi bi-bookmark"></i><span>伊莎貝爾</span>
+          </a>
+        </li>
+      </ul>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#hotel-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-building"></i>
+        <span>飯店</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#law-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-bank"></i>
+        <span>法律代書行政</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#life-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-cart2"></i>
+        <span>生活</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#learn-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-book"></i>
+        <span>學習</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#medical-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-capsule"></i>
+        <span>醫療</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link collapsed" data-bs-target="#school-nav" data-bs-toggle="collapse" href="#">
+        <i class="bi bi-gift"></i>
+        <span>校內優惠</span><i class="bi bi-chevron-down ms-auto"></i>
+      </a>
+    </li>
+      <!-- End Components Nav -->
+  </ul>
+</aside>
+<!-- End Sidebar-->
+
+<!-- Main page -->
+<main id="main" class="main">    
+  <div id="info-container" class="pagetitle">
+    <h1>Google Map 互動地圖</h1>
+    <h1>快來看看有什麼優惠！</h1>
+
+    <!--<div id="info-container" style="margin-top: 20px;"></div>-->
+    <!--<div id="map" style="height: 400px; width: 500px;"></div>-->
+  <div class="content-wrapper"></div>
+  </div>
+  <div id="map"></div>
+</main>
+<!-- End Main page -->
+
+<!-- Footer -->
+<footer id="footer" class="footer">
+  <div class="copyright">
+    &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+  </div>
+  <div class="credits">
+    Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+  </div>
+</footer>
+<!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script> <!-- 很重要不能刪>< -->
+
+<!-- Custom JS File -->
+<script src="main.js"></script>
+<script src="script.js"></script>
+
+<!-- Google Map API -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAjpj-12ah3GvLx6TZ9TdaOxJkCp_aWkLE&callback=initMap&libraries=&v=weekly" async defer></script>
+
+</body>
+</html>
